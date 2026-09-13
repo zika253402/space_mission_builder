@@ -7,6 +7,7 @@ public class MissionDirector {
                 .setRocket("Heavy Rocket")
                 .setCrewSize(4)
                 .build();
+    }
 
     public SpaceMission buildMoonMission() {
         return new SpaceMissionBuilder()
