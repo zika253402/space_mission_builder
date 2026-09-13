@@ -29,15 +29,31 @@ Names such as `setDestination()` clearly describe what the method does.
 
 ### 2. Small Methods
 
-Each method performs one simple task, such as setting the rocket or destination.
+Each method performs one simple task, such as setting the rocket or destination. Like in this part:
+public SpaceMissionBuilder setRocket(String rocket) { 
+this.rocket = rocket;
+return this;
+}
+
 
 ### 3. Single Responsibility
 
 Each class has one main responsibility.
 
+SpaceMission → represents the mission 
+SpaceMissionBuilder → builds the mission 
+MissionDirector → creates predefined missions 
+Main → runs the program
+
 ### 4. Validation
 
 `build()` checks invalid values, such as a negative crew size.
+
+if (crewSize < 0) {
+throw new IllegalArgumentException(
+"Crew size cannot be negative."
+);
+}
 
 ### 5. Consistent Formatting
 
