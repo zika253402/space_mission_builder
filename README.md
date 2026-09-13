@@ -47,7 +47,7 @@ Main → runs the program
 
 ### 4. Validation
 
-`build()` checks invalid values, such as a negative crew size.
+`build()` checks invalid values, such as a negative crew size. Example:
 
 if (crewSize < 0) {
 throw new IllegalArgumentException(
